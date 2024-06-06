@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'counter_demo.dart';
 
-final counterProvider = StateNotifierProvider<CounterDemo, int>((ref) {
-  return CounterDemo();
+final counterProvider = StateNotifierProvider<CounterModel, int>((ref) {
+  return CounterModel();
 });
 
-class CounterApp extends ConsumerWidget {
-  const CounterApp({super.key});
+class CounterAppWithModel extends ConsumerWidget {
+  const CounterAppWithModel({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
